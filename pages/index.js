@@ -6,6 +6,12 @@ import BaseImage from '../components/utils/BaseImage';
 import { SmoothScrollProvider } from '../context/SmoothScrollProvider';
 import unsplashUrls from '../lib/imageData';
 
+export async function getStaticProps() {
+	return {
+		props: {},
+	};
+}
+
 export default function Home() {
 	const getRandomImagesList = () => unsplashUrls.sort(() => Math.random() - 0.5).slice(0, 6);
 
